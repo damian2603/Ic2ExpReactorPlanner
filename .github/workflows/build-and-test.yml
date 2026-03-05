@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout mod repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0
 
@@ -39,7 +39,7 @@ jobs:
       run: ./gradlew --info --stacktrace assemble
 
     - name: Attach compilation artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: build-libs
         path: build/libs/
